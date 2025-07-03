@@ -1,5 +1,7 @@
 # Green-Finance-Data-Analysis
 
+Repositori ini menyajikan serangkaian analisis data yang berfokus pada proyek-proyek energi hijau, khususnya di Indonesia. Analisis ini dirancang untuk memberikan wawasan mendalam kepada para pemangku kepentingan, seperti pemerintah, investor, dan pengembang proyek, sehingga memungkinkan mereka untuk membuat keputusan yang terinformasi dan berbasis data.
+
 |Nama|	No Absen|	Kelompok|
 |-|-|-|
 |Agus Iskandar Darmawan|	09.000.DB2025|	II|
@@ -7,8 +9,8 @@
 |M. Sandi Firmansyah|	10.006.DB2025|	II|
 ---
 
-# Latar Belakang dan Pendahuluan
-**Latar Belakang**
+# Pendahuluan
+## Latar Belakang
 
 Sektor energi hijau memainkan peran krusial dalam mitigasi perubahan iklim dan pencapaian pembangunan berkelanjutan. Berbagai inisiatif dan proyek terus digalakkan untuk mengurangi emisi karbon, meningkatkan efisiensi energi, dan mendorong penggunaan sumber energi terbarukan. Namun, keberhasilan proyek-proyek ini sangat bergantung pada pemahaman mendalam tentang berbagai aspek, termasuk dampak lingkungan, kelayakan finansial, dan implikasi sosial di area proyek.
 
@@ -16,19 +18,17 @@ Data yang terfragmentasi seringkali menjadi tantangan dalam pengambilan keputusa
 
 Proyek ini bertujuan untuk mengatasi tantangan tersebut dengan menyediakan kerangka analisis data yang terstruktur. Fokus utama adalah pada pengintegrasian berbagai dataset untuk mengevaluasi efisiensi proyek, mengidentifikasi pola, mengelola risiko, dan bahkan memprediksi daya tarik investasi.
 
-**Pendahuluan**
+## Tujuan
 
-Repositori ini menyajikan serangkaian analisis data yang berfokus pada proyek-proyek energi hijau, khususnya di Indonesia. Analisis ini dirancang untuk memberikan wawasan mendalam kepada para pemangku kepentingan, seperti pemerintah, investor, dan pengembang proyek, sehingga memungkinkan mereka untuk membuat keputusan yang terinformasi dan berbasis data.
-
-**Tujuan utama dari proyek ini adalah:**
-
-Integrasi Data: Menggabungkan berbagai dataset (lingkungan, keuangan, sosial, ekonomi, dan geospasial) berdasarkan `Project_ID` untuk menciptakan pandangan data yang holistik.
+- **Integrasi Data**: Menggabungkan berbagai dataset (lingkungan, keuangan, sosial, ekonomi, dan geospasial) berdasarkan `Project_ID` untuk menciptakan pandangan data yang holistik.
 
 - **Analisis Efisiensi dan Risiko:** Mengevaluasi efisiensi pengurangan CO2 per unit investasi, mengidentifikasi risiko sosial terkait status lahan dan konflik, dan menganalisis faktor-faktor yang memengaruhi daya tarik investasi.
 
 - **Pengembangan Alat Analisis:** Membuat fungsi dan script yang dapat digunakan kembali untuk perhitungan metrik kunci dan pemfilteran data, termasuk implementasi penanganan kesalahan (error handling) untuk kekokohan.
 
 - **Aplikasi Machine Learning:** Membangun model machine learning, khususnya Decision Tree Classifier, untuk memprediksi daya tarik investasi berdasarkan fitur-fitur yang relevan.
+
+## Ruang Lingkup
 
 Notebook Jupyter dalam repositori ini (`notebooks/Green_Finance_Data-Analysis.ipynb`) terstruktur menjadi beberapa bagian, masing-masing menangani pertanyaan analitis spesifik yang mencakup konsep pemrograman fundamental hingga lanjutan, seperti:
 
