@@ -1,4 +1,4 @@
-# Green-Finance-Data-Analysis
+# Green Finance Data Analysis
 
 Repositori ini menyajikan serangkaian analisis data yang berfokus pada proyek-proyek energi hijau, khususnya di Indonesia. Analisis ini dirancang untuk memberikan wawasan mendalam kepada para pemangku kepentingan, seperti pemerintah, investor, dan pengembang proyek, sehingga memungkinkan mereka untuk membuat keputusan yang terinformasi dan berbasis data.
 
@@ -11,8 +11,8 @@ Repositori ini menyajikan serangkaian analisis data yang berfokus pada proyek-pr
 |M. Sandi Firmansyah|	10.006.DB2025|	II|
 ---
 
-# Pendahuluan
-## Latar Belakang
+# 📖Pendahuluan
+## 📝Latar Belakang
 
 Sektor energi hijau memainkan peran krusial dalam mitigasi perubahan iklim dan pencapaian pembangunan berkelanjutan. Berbagai inisiatif dan proyek terus digalakkan untuk mengurangi emisi karbon, meningkatkan efisiensi energi, dan mendorong penggunaan sumber energi terbarukan. Namun, keberhasilan proyek-proyek ini sangat bergantung pada pemahaman mendalam tentang berbagai aspek, termasuk dampak lingkungan, kelayakan finansial, dan implikasi sosial di area proyek.
 
@@ -20,7 +20,7 @@ Data yang terfragmentasi seringkali menjadi tantangan dalam pengambilan keputusa
 
 Proyek ini bertujuan untuk mengatasi tantangan tersebut dengan menyediakan kerangka analisis data yang terstruktur. Fokus utama adalah pada pengintegrasian berbagai dataset untuk mengevaluasi efisiensi proyek, mengidentifikasi pola, mengelola risiko, dan bahkan memprediksi daya tarik investasi.
 
-## Tujuan
+## 🎯Tujuan
 
 - **Integrasi Data**: Menggabungkan berbagai dataset (lingkungan, keuangan, sosial, ekonomi, dan geospasial) berdasarkan `Project_ID` untuk menciptakan pandangan data yang holistik.
 
@@ -30,7 +30,7 @@ Proyek ini bertujuan untuk mengatasi tantangan tersebut dengan menyediakan keran
 
 - **Aplikasi Machine Learning:** Membangun model machine learning, khususnya Decision Tree Classifier, untuk memprediksi daya tarik investasi berdasarkan fitur-fitur yang relevan.
 
-## Ruang Lingkup
+## 🔎Ruang Lingkup
 
 Notebook Jupyter dalam repositori ini (`notebooks/Green_Finance_Data-Analysis.ipynb`) terstruktur menjadi beberapa bagian, masing-masing menangani pertanyaan analitis spesifik yang mencakup konsep pemrograman fundamental hingga lanjutan, seperti:
 
@@ -52,5 +52,5 @@ Notebook Jupyter dalam repositori ini (`notebooks/Green_Finance_Data-Analysis.ip
 
 Melalui analisis ini, diharapkan dapat memberikan fondasi yang kuat untuk evaluasi proyek energi hijau yang lebih efektif dan mendukung transisi Indonesia menuju masa depan energi yang lebih berkelanjutan.
 
-# Pembahasan
+# ✍🏻 Pembahasan
 
