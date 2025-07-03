@@ -52,4 +52,5 @@ Notebook Jupyter dalam repositori ini (`notebooks/Green_Finance_Data-Analysis.ip
 
 Melalui analisis ini, diharapkan dapat memberikan fondasi yang kuat untuk evaluasi proyek energi hijau yang lebih efektif dan mendukung transisi Indonesia menuju masa depan energi yang lebih berkelanjutan.
 
-# Pembasahan
+# Pembahasan
+
