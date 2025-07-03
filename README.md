@@ -2,6 +2,8 @@
 
 Repositori ini menyajikan serangkaian analisis data yang berfokus pada proyek-proyek energi hijau, khususnya di Indonesia. Analisis ini dirancang untuk memberikan wawasan mendalam kepada para pemangku kepentingan, seperti pemerintah, investor, dan pengembang proyek, sehingga memungkinkan mereka untuk membuat keputusan yang terinformasi dan berbasis data.
 
+---
+
 |Nama|	No Absen|	Kelompok|
 |-|-|-|
 |Agus Iskandar Darmawan|	09.000.DB2025|	II|
@@ -49,3 +51,5 @@ Notebook Jupyter dalam repositori ini (`notebooks/Green_Finance_Data-Analysis.ip
 - **Machine Learning (Bonus):** Memprediksi daya tarik investasi menggunakan Decision Tree Classifier.
 
 Melalui analisis ini, diharapkan dapat memberikan fondasi yang kuat untuk evaluasi proyek energi hijau yang lebih efektif dan mendukung transisi Indonesia menuju masa depan energi yang lebih berkelanjutan.
+
+# Pembasahan
