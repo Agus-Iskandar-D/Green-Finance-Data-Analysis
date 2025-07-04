@@ -538,6 +538,7 @@ Rata-rata energy yang dikeluar atau digunakan adalah sebesar 19.600 kWh
 
 Description: The government aims to predict investment attractiveness ("High", "Medium", "Low") for new projects based on features like GDP_Growth, CO2_Reduction, and Investment_Cost.
 
+
 📌Task:
 
 - Merge Economic_Dataset.xlsx, Environmental_Dataset.xlsx, and Financial_Dataset.xlsx
