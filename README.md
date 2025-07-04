@@ -120,9 +120,6 @@ Description: The government needs the average CO2 reduction across PLTM projects
 ✔️Jawaban:
 
 ```
-
-import pandas as pd
-
 df_Env = pd.read_excel('Data/Environmental_Dataset.xlsx')
 
 # make list CO_Reduction
@@ -549,4 +546,6 @@ Description: The government aims to predict investment attractiveness ("High", "
 
 Klik: [Jawaban Bonus Question bisa baca disini](https://github.com/Agus-Iskandar-D/Green-Finance-Data-Analysis/blob/Bonus-Question-Sklearn/README.md)
 
+
+=======
 © ETL 2025
