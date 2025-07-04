@@ -98,7 +98,6 @@ print(f"Predicted Investment Attractiveness: {predicted_attractiveness[0]}")
 ```
 
 📈Output:
-
 Merged Data Head:
         Project_ID  GDP_Growth  Interest_Rate  Bond_Yield  \
 0    PLTS-NTT-001         4.5            4.2         5.1   
@@ -201,5 +200,5 @@ Model Accuracy on Test Set: 0.50
 
 Features of new project for prediction: {'GDP_Growth': 5.0, 'CO2_Reduction': 70000.0, 'Investment_Cost': 150.0}
 Predicted Investment Attractiveness: Medium: 💵💵💵
-'
+
 💡Analisis:
