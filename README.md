@@ -547,5 +547,12 @@ Description: The government aims to predict investment attractiveness ("High", "
 Klik: [Jawaban Bonus Question bisa baca disini](https://github.com/Agus-Iskandar-D/Green-Finance-Data-Analysis/blob/Bonus-Question-Sklearn/README.md)
 
 
+1. `Model Accuracy: 0.85`: Ini menunjukkan akurasi model Decision Tree pada data pengujian. Akurasi 0.85 (atau 85%) berarti model dapat memprediksi Daya_Tarik_Investasi dengan benar untuk 85% proyek dalam set pengujian. Ini adalah indikator seberapa baik model telah belajar dari data pelatihan.
+
+2. `Predicted attractiveness for the new project: High`: Ini adalah hasil prediksi model untuk proyek baru dengan fitur yang diberikan (`GDP_Growth=5.0, CO2_Reduction=70000, Investment_Cost=150`). Model memprediksi bahwa proyek ini akan memiliki `Daya_Tarik_Investasi` yang "High".
+
+Output ini menunjukkan bahwa model machine learning telah berhasil dilatih dan dapat digunakan untuk membuat prediksi tentang daya tarik investasi berdasarkan fitur-fitur yang relevan, membantu pemerintah dalam pengambilan keputusan investasi.
+=======
+
 =======
 © ETL 2025
