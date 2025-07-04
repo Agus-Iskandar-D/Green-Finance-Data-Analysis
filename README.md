@@ -835,28 +835,29 @@ Output ini mengkonfirmasi bahwa skrip berhasil mengiterasi melalui daftar proyek
 
 Pemerintah bertujuan untuk memprediksi daya tarik investasi ("High", "Medium", "Low") untuk proyek-proyek baru berdasarkan fitur-fitur seperti GDP_Growth, CO2_Reduction, dan Investment_Cost.
 
-Tugas:
+**Tugas:**
 
-Menggabungkan Economic_Dataset.xlsx, Environmental_Dataset.xlsx, dan Financial_Dataset.xlsx.
+1. Menggabungkan `Economic_Dataset.xlsx`, `Environmental_Dataset.xlsx`, dan `Financial_Dataset.xlsx`.
 
-Menggunakan scikit-learn untuk membangun Decision Tree Classifier dengan Daya_Tarik_Investasi sebagai target.
+2. Menggunakan scikit-learn untuk membangun Decision Tree Classifier dengan `Daya_Tarik_Investasi` sebagai target.
 
-Melatih model, mengevaluasi akurasinya, dan memprediksi daya tarik proyek baru (misalnya, GDP_Growth=5.0, CO2_Reduction=70000, Investment_Cost=150).
+3. Melatih model, mengevaluasi akurasinya, dan memprediksi daya tarik proyek baru (misalnya, `GDP_Growth=5.0`, `CO2_Reduction=70000`, `Investment_Cost=150)`.
 
-Penjelasan:
+**Penjelasan:**
+
 Pertanyaan bonus ini membahas dasar-dasar machine learning. Ini melibatkan:
 
 Persiapan Data: Menggabungkan beberapa dataset dan memilih fitur yang relevan serta variabel target.
 
-Pelatihan Model: Menggunakan DecisionTreeClassifier dari scikit-learn untuk melatih model. Ini biasanya melibatkan pembagian data menjadi set pelatihan dan pengujian, penanganan fitur kategorikal (misalnya, dengan one-hot encoding), dan pemasangan model.
+- **Pelatihan Model:** Menggunakan `DecisionTreeClassifier` dari `scikit-learn` untuk melatih model. Ini biasanya melibatkan pembagian data menjadi set pelatihan dan pengujian, penanganan fitur kategorikal (misalnya, dengan one-hot encoding), dan pemasangan model.
 
-Evaluasi: Menilai kinerja model (misalnya, menggunakan skor akurasi).
+- **Evaluasi:** Menilai kinerja model (misalnya, menggunakan skor akurasi).
 
-Prediksi: Menggunakan model yang telah dilatih untuk memprediksi daya tarik investasi dari proyek baru yang belum pernah dilihat.
+- **Prediksi:** Menggunakan model yang telah dilatih untuk memprediksi daya tarik investasi dari proyek baru yang belum pernah dilihat.
 
-Kode (Struktur Konseptual dari Green_Finance_Data-Analysis (3).ipynb):
+**Kode (Struktur Konseptual dari `Green_Finance_Data-Analysis (3).ipynb`):**
 
-Python
+```Python
 
 # Ini adalah struktur konseptual. Implementasi sebenarnya akan membutuhkan lebih banyak langkah
 # seperti penanganan fitur kategorikal, pembagian data, dan properti model evaluation.
@@ -915,14 +916,16 @@ print(f"Predicted attractiveness for the new project: {predicted_attractiveness[
 
 # If LabelEncoder was used for y, you'd decode it back:
 # print(f"Predicted attractiveness for the new project: {le.inverse_transform(predicted_attractiveness)[0]}")
-Output (Contoh Output yang Diharapkan):
+```
+**Output (Contoh Output yang Diharapkan):**
 
-Model Accuracy: 0.85
+`Model Accuracy: 0.85
 Predicted attractiveness for the new project: High
 Penjelasan Output (Contoh):
+`
 
-Model Accuracy: 0.85: Ini menunjukkan akurasi model Decision Tree pada data pengujian. Akurasi 0.85 (atau 85%) berarti model dapat memprediksi Daya_Tarik_Investasi dengan benar untuk 85% proyek dalam set pengujian. Ini adalah indikator seberapa baik model telah belajar dari data pelatihan.
+1. `Model Accuracy: 0.85`: Ini menunjukkan akurasi model Decision Tree pada data pengujian. Akurasi 0.85 (atau 85%) berarti model dapat memprediksi Daya_Tarik_Investasi dengan benar untuk 85% proyek dalam set pengujian. Ini adalah indikator seberapa baik model telah belajar dari data pelatihan.
 
-Predicted attractiveness for the new project: High: Ini adalah hasil prediksi model untuk proyek baru dengan fitur yang diberikan (GDP_Growth=5.0, CO2_Reduction=70000, Investment_Cost=150). Model memprediksi bahwa proyek ini akan memiliki Daya_Tarik_Investasi yang "High".
+2. `Predicted attractiveness for the new project: High`: Ini adalah hasil prediksi model untuk proyek baru dengan fitur yang diberikan (`GDP_Growth=5.0, CO2_Reduction=70000, Investment_Cost=150`). Model memprediksi bahwa proyek ini akan memiliki `Daya_Tarik_Investasi` yang "High".
 
 Output ini menunjukkan bahwa model machine learning telah berhasil dilatih dan dapat digunakan untuk membuat prediksi tentang daya tarik investasi berdasarkan fitur-fitur yang relevan, membantu pemerintah dalam pengambilan keputusan investasi.
