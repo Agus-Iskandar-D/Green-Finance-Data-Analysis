@@ -100,5 +100,8 @@ for index, row in df_merged.iterrows():
 
 📈 Output:
 
-![output 1]()
+![output 1](https://github.com/Agus-Iskandar-D/Green-Finance-Data-Analysis/blob/main/Asset/output%201.png)
+
+💡 Analisis:
+Projek PLTS memiliki efisiensi pengurangan karbon (CO2 Reduction) per satu juta nilai investasi (per unit investasi) rendah (low). Artinya....
 
