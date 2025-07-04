@@ -120,9 +120,6 @@ Description: The government needs the average CO2 reduction across PLTM projects
 ✔️Jawaban:
 
 ```
-
-import pandas as pd
-
 df_Env = pd.read_excel('Data/Environmental_Dataset.xlsx')
 
 # make list CO_Reduction
@@ -549,107 +546,4 @@ Description: The government aims to predict investment attractiveness ("High", "
 
 Klik: [Jawaban Bonus Question bisa baca disini](https://github.com/Agus-Iskandar-D/Green-Finance-Data-Analysis/blob/Bonus-Question-Sklearn/README.md)
 
-
-# Soal Bonus: Machine Learning/AI dengan Decision Tree
-
-**Deskripsi:**
-
-Pemerintah bertujuan untuk memprediksi daya tarik investasi ("High", "Medium", "Low") untuk proyek-proyek baru berdasarkan fitur-fitur seperti GDP_Growth, CO2_Reduction, dan Investment_Cost.
-
-**Tugas:**
-
-1. Menggabungkan `Economic_Dataset.xlsx`, `Environmental_Dataset.xlsx`, dan `Financial_Dataset.xlsx`.
-
-2. Menggunakan scikit-learn untuk membangun Decision Tree Classifier dengan `Daya_Tarik_Investasi` sebagai target.
-
-3. Melatih model, mengevaluasi akurasinya, dan memprediksi daya tarik proyek baru (misalnya, `GDP_Growth=5.0`, `CO2_Reduction=70000`, `Investment_Cost=150)`.
-
-**Penjelasan:**
-
-Pertanyaan bonus ini membahas dasar-dasar machine learning. Ini melibatkan:
-
-Persiapan Data: Menggabungkan beberapa dataset dan memilih fitur yang relevan serta variabel target.
-
-- **Pelatihan Model:** Menggunakan `DecisionTreeClassifier` dari `scikit-learn` untuk melatih model. Ini biasanya melibatkan pembagian data menjadi set pelatihan dan pengujian, penanganan fitur kategorikal (misalnya, dengan one-hot encoding), dan pemasangan model.
-
-- **Evaluasi:** Menilai kinerja model (misalnya, menggunakan skor akurasi).
-
-- **Prediksi:** Menggunakan model yang telah dilatih untuk memprediksi daya tarik investasi dari proyek baru yang belum pernah dilihat.
-
-**Kode (Struktur Konseptual dari `Green_Finance_Data-Analysis (3).ipynb`):**
-
-```Python
-
-# Ini adalah struktur konseptual. Implementasi sebenarnya akan membutuhkan lebih banyak langkah
-# seperti penanganan fitur kategorikal, pembagian data, dan properti model evaluation.
-
-import pandas as pd
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-
-# Definisikan jalur file
-economic_dataset_path = 'C:/EnergiHijau2025/Economic_Dataset.xlsx'
-environmental_dataset_path = 'C:/EnergiHijau2025/Environmental_Dataset.xlsx'
-financial_dataset_path = 'C:/EnergiHijau2025/Financial_Dataset.xlsx'
-
-# Muat dataset
-df_econ = pd.read_excel(economic_dataset_path)
-df_env = pd.read_excel(environmental_dataset_path)
-df_fin = pd.read_excel(financial_dataset_path)
-
-# Gabungkan dataset
-merged_df_ml = pd.merge(df_econ, df_env, on='Project_ID', how='inner')
-merged_df_ml = pd.merge(merged_df_ml, df_fin, on='Project_ID', how='inner')
-
-# Select features and target
-features = ['GDP_Growth', 'CO2_Reduction', 'Investment_Cost']
-target = 'Daya_Tarik_Investasi'
-
-# Handle potential missing values (simple imputation or dropping rows)
-merged_df_ml.dropna(subset=features + [target], inplace=True)
-
-X = merged_df_ml[features]
-y = merged_df_ml[target]
-
-# Convert categorical target to numerical if necessary (e.g., using LabelEncoder)
-# For Decision Tree, string labels can sometimes be handled directly, but numerical is safer.
-# from sklearn.preprocessing import LabelEncoder
-# le = LabelEncoder()
-# y_encoded = le.fit_transform(y)
-
-# Split data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Initialize and train the Decision Tree Classifier
-model = DecisionTreeClassifier(random_state=42)
-model.fit(X_train, y_train)
-
-# Evaluate the model
-y_pred = model.predict(X_test)
-accuracy = accuracy_score(y_test, y_pred)
-print(f"\nModel Accuracy: {accuracy:.2f}")
-
-# Predict for a new project
-new_project_data = pd.DataFrame([[5.0, 70000, 150]], columns=features)
-predicted_attractiveness = model.predict(new_project_data)
-print(f"Predicted attractiveness for the new project: {predicted_attractiveness[0]}")
-
-# If LabelEncoder was used for y, you'd decode it back:
-# print(f"Predicted attractiveness for the new project: {le.inverse_transform(predicted_attractiveness)[0]}")
-```
-**Output (Contoh Output yang Diharapkan):**
-
-`Model Accuracy: 0.85
-Predicted attractiveness for the new project: High
-Penjelasan Output (Contoh):
-`
-
-1. `Model Accuracy: 0.85`: Ini menunjukkan akurasi model Decision Tree pada data pengujian. Akurasi 0.85 (atau 85%) berarti model dapat memprediksi Daya_Tarik_Investasi dengan benar untuk 85% proyek dalam set pengujian. Ini adalah indikator seberapa baik model telah belajar dari data pelatihan.
-
-2. `Predicted attractiveness for the new project: High`: Ini adalah hasil prediksi model untuk proyek baru dengan fitur yang diberikan (`GDP_Growth=5.0, CO2_Reduction=70000, Investment_Cost=150`). Model memprediksi bahwa proyek ini akan memiliki `Daya_Tarik_Investasi` yang "High".
-
-Output ini menunjukkan bahwa model machine learning telah berhasil dilatih dan dapat digunakan untuk membuat prediksi tentang daya tarik investasi berdasarkan fitur-fitur yang relevan, membantu pemerintah dalam pengambilan keputusan investasi.
-=======
-main
 
