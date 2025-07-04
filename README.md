@@ -11,13 +11,10 @@ Description: The government aims to predict investment attractiveness ("High", "
 
 Pertanyaan bonus ini membahas dasar-dasar machine learning. Ini melibatkan:
 
-Persiapan Data: Menggabungkan beberapa dataset dan memilih fitur yang relevan serta variabel target.
-
-- **Pelatihan Model:** Menggunakan `DecisionTreeClassifier` dari `scikit-learn` untuk melatih model. Ini biasanya melibatkan pembagian data menjadi set pelatihan dan pengujian, penanganan fitur kategorikal (misalnya, dengan one-hot encoding), dan pemasangan model.
-
-- **Evaluasi:** Menilai kinerja model (misalnya, menggunakan skor akurasi).
-
-- **Prediksi:** Menggunakan model yang telah dilatih untuk memprediksi daya tarik investasi dari proyek baru yang belum pernah dilihat.
+- Persiapan Data: Menggabungkan beberapa dataset dan memilih fitur yang relevan serta variabel target.
+- Pelatihan Model: Menggunakan `DecisionTreeClassifier` dari `scikit-learn` untuk melatih model. Ini biasanya melibatkan pembagian data menjadi set pelatihan dan pengujian, penanganan fitur kategorikal (misalnya, dengan one-hot encoding), dan pemasangan model.
+- Evaluasi: Menilai kinerja model (misalnya, menggunakan skor akurasi).
+- Prediksi: Menggunakan model yang telah dilatih untuk memprediksi daya tarik investasi dari proyek baru yang belum pernah dilihat.
 
 Berikut skripnya:
 
