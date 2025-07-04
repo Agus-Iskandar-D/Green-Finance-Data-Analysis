@@ -70,24 +70,26 @@ Soal 7: Penanganan Error dalam Loop
 
 Soal Bonus: Machine Learning/AI dengan Decision Tree
 
-Soal 1: Pernyataan Kondisional (If-Else) dan Operasi Aritmatika
-Deskripsi:
+# Soal 1: Pernyataan Kondisional (If-Else) dan Operasi Aritmatika
+**Deskripsi:**
+
 Pemerintah ingin mengidentifikasi proyek PLTS (Pembangkit Listrik Tenaga Surya) dengan efisiensi pengurangan CO2 yang tinggi per unit investasi, dihitung sebagai pengurangan CO2 per juta rupiah.
 
 Tugas:
 
-Menggabungkan Environmental_Dataset.xlsx dan Financial_Dataset.xlsx menggunakan Project_ID.
+1. Menggabungkan `Environmental_Dataset.xlsx` dan `Financial_Dataset.xlsx` menggunakan `Project_ID.`
 
-Untuk proyek PLTS (di mana Project_ID dimulai dengan "PLTS"), hitung rasio: CO2_Reduction / (Investment_Cost * 1.000.000).
+2. Untuk proyek PLTS (di mana `Project_ID` dimulai dengan "PLTS"), hitung rasio: `CO2_Reduction / (Investment_Cost * 1.000.000`).
 
-Gunakan pernyataan if-else untuk mengklasifikasikan rasio sebagai "High" (≥ 0.5 ton CO2e/juta Rp) atau "Low" (< 0.5).
+3. Gunakan pernyataan if-else untuk mengklasifikasikan rasio sebagai "High" (≥ 0.5 ton CO2e/juta Rp) atau "Low" (< 0.5).
 
-Tampilkan hasilnya sebagai: "Project_ID: Ratio (Kategori)" menggunakan f-string.
+4. Tampilkan hasilnya sebagai: "Project_ID: Ratio (Kategori)" menggunakan f-string.
 
-Penjelasan:
+**Penjelasan:**
+
 Bagian ini menunjukkan cara memuat data dasar, menggabungkan dataset, dan menerapkan logika kondisional dengan operasi aritmatika. Ini menghitung metrik efisiensi untuk proyek tenaga surya dan mengkategorikannya berdasarkan ambang batas yang ditentukan.
 
-Kode (dari Green_Finance_Data-Analysis (3).ipynb):
+**Kode (dari `Green_Finance_Data-Analysis (3).ipynb`):**
 
 ```Python
 
@@ -147,36 +149,39 @@ PLTS-DPK-009: 0.5714285714285714 (High)
 ```
 **Penjelasan Output:**
 
-- **Output DataFrame:** Bagian pertama dari output adalah DataFrame yang digabungkan (df_merged). Ini menampilkan data dari Environmental_Dataset dan Financial_Dataset yang disatukan berdasarkan Project_ID. Kita bisa melihat kolom seperti Project_ID, CO2_Reduction, Energy_Output, Environmental_Risk_Index, Investment_Cost, dan Financial_Viability.
+**1. Output DataFrame:** Bagian pertama dari output adalah `DataFrame` yang digabungkan (`df_merged`). Ini menampilkan data dari `Environmental_Dataset` dan `Financial_Dataset` yang disatukan berdasarkan `Project_ID.` Kita bisa melihat kolom seperti `Project_ID,` `CO2_Reduction,` `Energy_Output,` `Environmental_Risk_Index,` `Investment_Cost,` dan `Financial_Viability.`
 
-**Output Analisis PLTS:**
+**2. Output Analisis PLTS:**
 
-- **PLTS-BDG-002:** 0.5416666666666666 (High): Untuk proyek PLTS dengan ID PLTS-BDG-002, rasio efisiensi pengurangan CO2 per juta investasi adalah sekitar 0.5417. Karena nilai ini lebih besar atau sama dengan 0.5, proyek ini dikategorikan sebagai "High" efisiensinya.
+- `PLTS-BDG-002: 0.5416666666666666 (High)`: Untuk proyek PLTS dengan ID `PLTS-BDG-002`, rasio efisiensi pengurangan CO2 per juta investasi adalah sekitar 0.5417. Karena nilai ini lebih besar atau sama dengan 0.5, proyek ini dikategorikan sebagai "High" efisiensinya.
 
-- **PLTS-JKT-005:** 0.6666666666666666 (High): Proyek PLTS-JKT-005 memiliki rasio sekitar 0.6667, yang juga lebih besar dari 0.5, sehingga dikategorikan "High".
+- `PLTS-JKT-005: 0.6666666666666666 (High):` Proyek `PLTS-JKT-005` memiliki rasio sekitar 0.6667, yang juga lebih besar dari 0.5, sehingga dikategorikan "High".
 
-- **PLTS-DPK-009:** 0.5714285714285714 (High): Sama halnya, proyek PLTS-DPK-009 dengan rasio sekitar 0.5714 juga dikategorikan "High".
-Proyek-proyek non-PLTS (seperti PLTM, PLTB, PLTA) tidak ditampilkan dalam output karena kondisi if row['Project_ID'].startswith('PLTS') hanya memproses proyek PLTS.
+- `PLTS-DPK-009: 0.5714285714285714 (High):` Sama halnya, proyek `PLTS-DPK-009` dengan rasio sekitar 0.5714 juga dikategorikan "High".
+Proyek-proyek non-PLTS (seperti PLTM, PLTB, PLTA) tidak ditampilkan dalam output karena kondisi `if row['Project_ID'].startswith('PLTS')` hanya memproses proyek PLTS.
 
+---
 # Soal 2: Loop For dan List
+
 **Deskripsi:**
 
 Pemerintah membutuhkan rata-rata pengurangan CO2 di seluruh proyek PLTM (Pembangkit Listrik Tenaga Mikrohidro) untuk menilai dampak lingkungan kolektifnya.
 
 **Tugas:**
 
-Menggunakan Environmental_Dataset.xlsx.
+1. Menggunakan `Environmental_Dataset.xlsx.`
 
-Membuat daftar nilai CO2_Reduction untuk proyek PLTM (di mana Project_ID dimulai dengan "PLTM").
+2. Membuat daftar nilai `CO2_Reduction` untuk proyek PLTM (di mana `Project_ID` dimulai dengan "PLTM").
 
-Menggunakan loop for untuk menghitung total pengurangan CO2 dan jumlah proyek PLTM.
+3. Menggunakan loop for untuk menghitung total pengurangan CO2 dan jumlah proyek PLTM.
 
-Menghitung dan menampilkan rata-ratanya.
+4. Menghitung dan menampilkan rata-ratanya.
 
-Penjelasan:
+**Penjelasan:**
+
 Bagian ini berfokus pada iterasi melalui DataFrame, memfilter data berdasarkan kondisi, menambahkan nilai ke daftar, dan kemudian melakukan agregasi (penjumlahan dan penghitungan) untuk menghitung rata-rata.
 
-Kode (dari Green_Finance_Data-Analysis (3).ipynb):
+**Kode (dari `Green_Finance_Data-Analysis (3).ipynb`):**
 
 ```Python
 
@@ -214,9 +219,9 @@ Average CO2 Reduction for PLTM Projects:52500.0 tons CO2e
 ```
 **Penjelasan Output:**
 
-- **1. `List CO2_Reduction project PLTM:** [32000, 48000, 75000, 55000]:` Ini menunjukkan daftar (PLTM_CO2_Red_List) yang berisi nilai CO2_Reduction hanya untuk proyek-proyek yang Project_IDnya dimulai dengan "PLTM". Dari dataset, terlihat ada empat proyek PLTM dengan nilai pengurangan CO2 masing-masing 32000, 48000, 75000, dan 55000.
+1. `List CO2_Reduction project PLTM:** [32000, 48000, 75000, 55000]:` Ini menunjukkan daftar (`PLTM_CO2_Red_List`) yang berisi nilai `CO2_Reduction` hanya untuk proyek-proyek yang `Project_ID`nya dimulai dengan "PLTM". Dari dataset, terlihat ada empat proyek PLTM dengan nilai pengurangan CO2 masing-masing 32000, 48000, 75000, dan 55000.
 
-- **2. `Average CO2 Reduction for PLTM Projects:** 52500.0 tons CO2e:` Ini adalah rata-rata dari nilai-nilai pengurangan CO2 dalam daftar tersebut. Perhitungan: (32000+48000+75000+55000)/4=210000/4=52500. Output ini memberikan gambaran tentang rata-rata dampak lingkungan (dalam hal pengurangan CO2) dari proyek-proyek Pembangkit Listrik Tenaga Mikrohidro.
+2. `Average CO2 Reduction for PLTM Projects: 52500.0 tons CO2e:` Ini adalah rata-rata dari nilai-nilai pengurangan CO2 dalam daftar tersebut. Perhitungan: (32000+48000+75000+55000)/4=210000/4=52500. Output ini memberikan gambaran tentang rata-rata dampak lingkungan (dalam hal pengurangan CO2) dari proyek-proyek Pembangkit Listrik Tenaga Mikrohidro.
 
 ---
 
@@ -228,18 +233,19 @@ Pemerintah membutuhkan alat untuk memeriksa status lahan dan tingkat konflik sos
 
 **Tugas:**
 
-Menggunakan Social_Dataset.xlsx.
+1. Menggunakan `Social_Dataset.xlsx.`
 
-Menulis program menggunakan loop while untuk meminta Project_ID hingga "DONE" dimasukkan.
+2. Menulis program menggunakan loop while untuk meminta `Project_ID` hingga "DONE" dimasukkan.
 
-Untuk Project_ID yang valid, tampilkan Land_Status dan Tingkat_Konflik.
+3. Untuk `Project_ID` yang valid, tampilkan `Land_Status` dan `Tingkat_Konflik.`
 
-Untuk Project_ID yang tidak valid, tampilkan "Project not found".
+4. Untuk `Project_ID` yang tidak valid, tampilkan "Project not found".
 
-Penjelasan:
-Bagian ini menunjukkan interaksi pengguna menggunakan loop while, validasi input, dan pengambilan data dari dictionary untuk pencarian cepat. Penanganan error untuk ID proyek yang tidak ada juga disertakan. Output di bawah ini adalah simulasi input, seperti yang didefinisikan dalam kode.
+**Penjelasan:**
 
-Kode (dari Green_Finance_Data-Analysis (3).ipynb):
+Bagian ini menunjukkan interaksi pengguna menggunakan loop `while`, validasi input, dan pengambilan data dari dictionary untuk pencarian cepat. Penanganan error untuk ID proyek yang tidak ada juga disertakan. Output di bawah ini adalah simulasi input, seperti yang didefinisikan dalam kode.
+
+**Kode (dari `Green_Finance_Data-Analysis (3).ipynb`):**
 
 ```Python
 
@@ -310,15 +316,16 @@ Done, goodbye!
 
 **Penjelasan Output:**
 
-- **1. Simulated Input:** PLTM001 & Project 'PLTM001' not found. Output ini menunjukkan bahwa meskipun PLTM001 adalah format yang mirip dengan ID proyek, dalam Social_Dataset.xlsx kemungkinan ID proyeknya adalah PLTM-ACHD-001 atau PLTM-SMG-004, dll., dengan tanda hubung (-). Oleh karena itu, input PLTM001 tidak ditemukan.
+1. **Simulated Input:** PLTM001 & Project 'PLTM001' not found. Output ini menunjukkan bahwa meskipun `PLTM001` adalah format yang mirip dengan ID proyek, dalam `Social_Dataset.xlsx` kemungkinan ID proyeknya adalah `PLTM-ACHD-001` atau `PLTM-SMG-004`, dll., dengan tanda hubung (`-`). Oleh karena itu, input `PLTM001` tidak ditemukan.
 
-- **2. Simulated Input:** HYDRO005 & Project 'HYDRO005' not found. Sama seperti di atas, HYDRO005 adalah ID yang tidak cocok dengan format atau ID yang ada dalam dataset sosial.
+2. **Simulated Input: HYDRO005 & Project 'HYDRO005' not found.** Sama seperti di atas, `HYDRO005` adalah ID yang tidak cocok dengan format atau ID yang ada dalam dataset sosial.
 
-- **3. Simulated Input:** NONEXISTENT & Project 'NONEXISTENT' not found. Ini menunjukkan penanganan yang benar untuk ID proyek yang jelas-jelas tidak ada dalam dataset.
+3. **Simulated Input: NONEXISTENT & Project 'NONEXISTENT'** not found. Ini menunjukkan penanganan yang benar untuk ID proyek yang jelas-jelas tidak ada dalam dataset.
 
-- **4. Simulated Input:** DONE & Done, goodbye! Ketika pengguna (atau simulasi) memasukkan "DONE", program mengenali perintah keluar dan menghentikan loop, menampilkan pesan selamat tinggal.
+4. **Simulated Input: DONE & Done, goodbye!** Ketika pengguna (atau simulasi) memasukkan "DONE", program mengenali perintah keluar dan menghentikan loop, menampilkan pesan selamat tinggal.
 
-Penting untuk dicatat bahwa jika ID proyek dalam Social_Dataset.xlsx adalah PLTM-ACHD-001 dan pengguna memasukkan PLTM-ACHD-001 (dengan tanda hubung), maka output akan menampilkan status lahan dan tingkat konflik yang relevan. Output di atas mencerminkan skenario di mana ID yang dimasukkan tidak cocok persis dengan yang ada di dataset.
+Penting untuk dicatat bahwa jika ID proyek dalam `Social_Dataset.xlsx` adalah `PLTM-ACHD-001` dan pengguna memasukkan `PLTM-ACHD-001` (dengan tanda hubung), maka output akan menampilkan status lahan dan tingkat konflik yang relevan. Output di atas mencerminkan skenario di mana ID yang dimasukkan tidak cocok persis dengan yang ada di dataset.
+
 ---
 # Soal 4: Dictionary dan Filter Kondisional
 
@@ -328,18 +335,19 @@ Pemerintah mencari proyek dengan daya tarik investasi tinggi dan konflik sosial 
 
 **Tugas:**
 
-Menggabungkan Economic_Dataset.xlsx dan Social_Dataset.xlsx menggunakan Project_ID.
+1. Menggabungkan `Economic_Dataset.xlsx` dan `Social_Dataset.xlsx` menggunakan `Project_ID.`
 
-Membuat dictionary dengan Project_ID sebagai kunci dan tuple (Daya_Tarik_Investasi, Tingkat_Konflik) sebagai nilai.
+2. Membuat dictionary dengan `Project_ID` sebagai kunci dan tuple (`Daya_Tarik_Investasi`, `Tingkat_Konflik`) sebagai nilai.
 
-Menggunakan loop for dengan if statement untuk memfilter proyek di mana Daya_Tarik_Investasi == "High" dan Tingkat_Konflik == "Low".
+3. Menggunakan loop for dengan if statement untuk memfilter proyek di mana `Daya_Tarik_Investasi` == "High" dan `Tingkat_Konflik` == "Low".
 
-Menampilkan Project_ID yang difilter.
+4. Menampilkan `Project_ID` yang difilter.
 
 **Penjelasan:**
+
 Bagian ini melibatkan penggabungan dua dataset, penstrukturan data ke dalam dictionary, dan kemudian penerapan beberapa filter kondisional dalam loop untuk mengidentifikasi proyek yang memenuhi kriteria tertentu.
 
-Kode (dari `Green_Finance_Data-Analysis (3).ipynb`):
+**Kode (dari `Green_Finance_Data-Analysis (3).ipynb`):**
 
 ```Python
 
@@ -404,21 +412,22 @@ Filtering projects with 'High' Investment Attractiveness and 'Low' Social Confli
 
 Output menunjukkan daftar proyek yang memenuhi kedua kriteria yang diinginkan oleh pemerintah:
 
-Daya_Tarik_Investasi adalah "High" (Tinggi)
+- `Daya_Tarik_Investasi` adalah "High" (Tinggi)
 
-Tingkat_Konflik adalah "Low" (Rendah)
+- `Tingkat_Konflik` adalah "Low" (Rendah)
 
-Berdasarkan data yang digabungkan dari Economic_Dataset.xlsx dan Social_Dataset.xlsx, proyek-proyek berikut ditemukan cocok dengan kriteria ini:
+Berdasarkan data yang digabungkan dari `Economic_Dataset.xlsx` dan `Social_Dataset.xlsx,` proyek-proyek berikut ditemukan cocok dengan kriteria ini:
 
-PLTS-BDG-002
+- `PLTS-BDG-002`
 
-PLTS-JKT-005
+- `PLTS-JKT-005`
 
-PLTB-MDN-008
+- `PLTB-MDN-008`
 
-PLTS-DPK-009
+- `PLTS-DPK-009`
 
 Ini berarti proyek-proyek ini dianggap paling menarik untuk investasi dengan risiko sosial yang minim, sehingga dapat menjadi fokus untuk pengambilan keputusan lebih lanjut.
+
 ---
 # Soal 5: Fungsi dan Aritmatika
 
@@ -428,17 +437,17 @@ Pemerintah perlu menghitung total investasi untuk proyek-proyek dengan efisiensi
 
 **Tugas:**
 
-Definisikan fungsi calculate_total_investment yang menerima daftar Project_ID dan data gabungan dari Geospatial_Dataset.xlsx dan Financial_Dataset.xlsx.
+1. Definisikan fungsi `calculate_total_investment` yang menerima daftar `Project_ID` dan data gabungan dari `Geospatial_Dataset.xlsx` dan `Financial_Dataset.xlsx.`
 
-Gunakan loop for untuk menjumlahkan Investment_Cost untuk proyek di mana Efisiensi_Lokasi == "High".
+2. Gunakan loop for untuk menjumlahkan `Investment_Cost` untuk proyek di mana `Efisiensi_Lokasi` == "High".
 
-Kembalikan dan tampilkan totalnya.
+3. Kembalikan dan tampilkan totalnya.
 
 **Penjelasan:**
 
 Bagian ini memperkenalkan konsep fungsi untuk merangkum logika, menggabungkan dataset tambahan, dan melakukan penjumlahan berdasarkan filter kategori. Ini juga mencakup penanganan error untuk pemuatan file dan konsistensi data.
 
-Kode (dari `Green_Finance_Data-Analysis (3).ipynb`):
+**Kode (dari `Green_Finance_Data-Analysis (3).ipynb`):**
 
 ```Python
 
@@ -499,11 +508,12 @@ print(f"Total Investment for Projects with High Location Efficiency: {total_inve
 ```
 **Output:**
 
-`Total Investment for Projects with High Location Efficiency: 890.00`
-
+```Total Investment for Projects with High Location Efficiency: 890.00
+```
 **Penjelasan Output:**
 
-Output Total Investment for Projects with High Location Efficiency: 890.00 menunjukkan bahwa total biaya investasi untuk semua proyek yang memiliki Efisiensi_Lokasi "High" adalah 890 juta Rupiah (karena Investment_Cost kemungkinan dalam satuan jutaan). Fungsi calculate_total_investment berhasil mengidentifikasi proyek-proyek dengan efisiensi lokasi tinggi dari dataset gabungan geospasial dan finansial, lalu menjumlahkan biaya investasi mereka.
+Output `Total Investment for Projects with High Location Efficiency: 890.00` menunjukkan bahwa total biaya investasi untuk semua proyek yang memiliki `Efisiensi_Lokasi` "High" adalah 890 juta Rupiah (karena `Investment_Cost` kemungkinan dalam satuan jutaan). Fungsi `calculate_total_investment` berhasil mengidentifikasi proyek-proyek dengan efisiensi lokasi tinggi dari dataset gabungan geospasial dan finansial, lalu menjumlahkan biaya investasi mereka.
+
 ---
 # Soal 6: Modul dan Penanganan Error
 
@@ -513,19 +523,19 @@ Pemerintah membutuhkan alat yang dapat digunakan kembali untuk menghitung efisie
 
 **Tugas:**
 
-Buat modul green_analysis.py dengan fungsi compute_co2_efficiency yang menerima CO2_Reduction dan Investment_Cost sebagai parameter.
+1. Buat modul `green_analysis.py` dengan fungsi `compute_co2_efficiency` yang menerima `CO2_Reduction` dan `Investment_Cost` sebagai parameter.
 
-Gunakan try-except untuk menangani ZeroDivisionError (jika Investment_Cost adalah 0), mengembalikan "Cannot compute" jika terjadi error.
+2. Gunakan try-except untuk menangani `ZeroDivisionErro`r (jika `Investment_Cost` adalah 0), mengembalikan "Cannot compute" jika terjadi error.
 
-Jika tidak ada error, hitung dan kembalikan rasio: CO2_Reduction / (Investment_Cost * 1.000.000).
+3. Jika tidak ada error, hitung dan kembalikan rasio: `CO2_Reduction / (Investment_Cost * 1.000.000)`.
 
-Dalam skrip utama, impor modul dan ujilah pada tiga proyek.
+4. Dalam skrip utama, impor modul dan ujilah pada tiga proyek.
 
 **Penjelasan:**
 
 Bagian ini berfokus pada pemrograman modular dengan membuat file Python terpisah untuk fungsi yang dapat digunakan kembali. Ini juga menekankan penanganan error yang kuat, khususnya untuk pembagian dengan nol dan penanganan input non-numerik untuk perhitungan.
 
-green_analysis.py (Konten hipotetis berdasarkan deskripsi soal):
+`green_analysis.py` **(Konten hipotetis berdasarkan deskripsi soal):**
 
 ```Python
 
@@ -555,7 +565,7 @@ def compute_co2_efficiency(co2_reduction, investment_cost):
     except (ZeroDivisionError, TypeError, ValueError) as e:
         return f"Cannot compute: {e}"
 ```
-**Skrip Utama (dari Green_Finance_Data-Analysis (3).ipynb):**
+**Skrip Utama (dari `Green_Finance_Data-Analysis (3).ipynb`):**
 
 ```Python
 
@@ -660,46 +670,50 @@ CO2 Reduction Efficiency: Cannot compute: could not convert string to float: 'N/
 
 --- End of Test ---
 ```
-Penjelasan Output:
+**Penjelasan Output:**
 
-Output menunjukkan hasil pengujian fungsi compute_co2_efficiency untuk berbagai proyek, termasuk kasus-kasus penanganan error:
+Output menunjukkan hasil pengujian fungsi `compute_co2_efficiency` untuk berbagai proyek, termasuk kasus-kasus penanganan error:
 
-Untuk Proyek-Proyek Valid (e.g., PLTM-ACHD-001, PLTS-BDG-002, dst.):
+1. **Untuk Proyek-Proyek Valid (e.g., PLTM-ACHD-001, PLTS-BDG-002, dst.):**
 
-Output menunjukkan CO2 Reduction Efficiency dalam format float (desimal). Ini adalah hasil perhitungan CO2_Reduction / (Investment_Cost * 1.000.000). Misalnya, untuk PLTM-ACHD-001, efisiensinya adalah 0.0003200000. Ini berarti fungsi berhasil menghitung rasio untuk proyek-proyek dengan data input yang valid.
+- Output menunjukkan`CO2 Reduction Efficiency` dalam format float (desimal). Ini adalah hasil perhitungan `CO2_Reduction / (Investment_Cost * 1.000.000)`. Misalnya, untuk `PLTM-ACHD-001`, efisiensinya adalah `0.0003200000`. Ini berarti fungsi berhasil menghitung rasio untuk proyek-proyek dengan data input yang valid.
 
-Untuk TEST_ZERO_INV:
+2. **Untuk `EST_ZERO_INV`:**
 
-Output: CO2 Reduction Efficiency: Cannot compute: Investment_Cost cannot be zero.
+- Output: `CO2 Reduction Efficiency: Cannot compute: Investment_Cost cannot be zero`.
 
-Ini menunjukkan bahwa blok try-except berhasil menangkap ZeroDivisionError yang terjadi ketika Investment_Cost adalah 0. Pesan "Investment_Cost cannot be zero." dikembalikan, sesuai dengan penanganan error yang diharapkan.
+- Ini menunjukkan bahwa blok `try-except` berhasil menangkap `ZeroDivisionError` yang terjadi ketika `Investment_Cost` adalah 0. Pesan "Investment_Cost cannot be zero." dikembalikan, sesuai dengan penanganan error yang diharapkan.
 
-Untuk TEST_INVALID_INV:
+3. **Untuk `TEST_INVALID_INV`:
 
-Output: CO2 Reduction Efficiency: Cannot compute: could not convert string to float: 'N/A'
+- Output: `CO2 Reduction Efficiency: Cannot compute: could not convert string to float: 'N/A'`
 
-Ini menunjukkan bahwa blok try-except berhasil menangkap ValueError yang terjadi ketika Investment_Cost adalah string "N/A" dan Python mencoba mengkonversinya menjadi float. Pesan error spesifik dari Python ditampilkan, menunjukkan bahwa fungsi telah menangani input yang tidak valid dengan benar.
+= Ini menunjukkan bahwa blok `try-except` berhasil menangkap `ValueError` yang terjadi ketika `Investment_Cost` adalah string "N/A" dan Python mencoba mengkonversinya menjadi float. Pesan error spesifik dari Python ditampilkan, menunjukkan bahwa fungsi telah menangani input yang tidak valid dengan benar.
 
-Secara keseluruhan, output ini memverifikasi bahwa modul green_analysis.py (atau fungsi compute_co2_efficiency yang disimulasikan) bekerja dengan benar untuk input valid dan secara efektif menangani kasus-kasus error seperti pembagian dengan nol dan tipe data yang tidak sesuai.
+Secara keseluruhan, output ini memverifikasi bahwa modul `green_analysis.py` (atau fungsi `compute_co2_efficiency` yang disimulasikan) bekerja dengan benar untuk input valid dan secara efektif menangani kasus-kasus error seperti pembagian dengan nol dan tipe data yang tidak sesuai.
 
-Soal 7: Penanganan Error dalam Loop
-Deskripsi:
+---
+# Soal 7: Penanganan Error dalam Loop
+
+**Deskripsi:**
+
 Pemerintah perlu menghitung rata-rata output energi dari proyek-proyek terpilih, dengan menangani data yang hilang.
 
-Tugas:
+**Tugas:**
 
-Buat daftar Project_ID untuk dianalisis.
+1. Buat daftar `Project_ID` untuk dianalisis.
 
-Gunakan loop for dengan try-except untuk memproses Energy_Output dari Environmental_Dataset.xlsx, menangkap KeyError untuk Project_ID yang hilang.
+2. Gunakan loop for dengan try-except untuk memproses `Energy_Output` dari `Environmental_Dataset.xlsx`, menangkap KeyError untuk `Project_ID` yang hilang.
 
-Jumlahkan nilai Energy_Output yang valid dan hitung proyek yang valid.
+3. Jumlahkan nilai `Energy_Output` yang valid dan hitung proyek yang valid.
 
-Hitung dan tampilkan rata-ratanya.
+4. Hitung dan tampilkan rata-ratanya.
 
-Penjelasan:
-Bagian ini berfokus pada pemrosesan data yang kuat dalam loop, khususnya menggunakan blok try-except untuk menangani skenario di mana Project_ID mungkin hilang dari dataset atau memiliki nilai NaN untuk Energy_Output.
+**Penjelasan:**
 
-Kode (dari Green_Finance_Data-Analysis (3).ipynb):
+Bagian ini berfokus pada pemrosesan data yang kuat dalam loop, khususnya menggunakan blok `try-except` untuk menangani skenario di mana `Project_ID` mungkin hilang dari dataset atau memiliki nilai `NaN` untuk `Energy_Output.`
+
+**Kode (dari `Green_Finance_Data-Analysis (3).ipynb`):**
 
 ```Python
 
@@ -793,28 +807,32 @@ Total valid energy output: 334000 kWh
 Number of valid projects processed: 10
 Average energy output: 33400.00 kWh
 ```
-Penjelasan Output:
+**Penjelasan Output:**
 
-Output DataFrame Awal: Menampilkan df_Env yang dimuat dari Environmental_Dataset.xlsx, berisi Project_ID, CO2_Reduction, Energy_Output, dan Environmental_Risk_Index.
+1. **Output DataFrame Awal:** Menampilkan `df_Env` yang dimuat dari `Environmental_Dataset.xlsx`, berisi `Project_ID`, `CO2_Reduction`, `Energy_Output`, dan `Environmental_Risk_Index`.
 
-List Project ID: [...]: Ini adalah daftar semua Project_ID yang ditemukan dalam df_Env, yang akan diiterasi oleh loop.
+2. `List Project ID: [...]:` Ini adalah daftar semua `Project_ID` yang ditemukan dalam `df_Env`, yang akan diiterasi oleh loop.
 
-Processing energy output for selected projects:: Bagian ini menunjukkan hasil pemrosesan setiap proyek dalam loop:
+3. `Processing energy output for selected projects`:: Bagian ini menunjukkan hasil pemrosesan setiap proyek dalam loop:
 
-Project ID 'XYZ': Energy Output = [value]: Untuk setiap proyek yang ditemukan dengan Energy_Output yang valid, nilai output energinya ditampilkan. Dalam contoh output ini, semua proyek memiliki nilai Energy_Output yang valid, sehingga tidak ada pesan peringatan atau error yang muncul terkait NaN atau Project_ID yang tidak ditemukan.
+- `Project ID 'XYZ': Energy Output = [value]:` Untuk setiap proyek yang ditemukan dengan `Energy_Output` yang valid, nilai output energinya ditampilkan. Dalam contoh output ini, semua proyek memiliki nilai `Energy_Output` yang valid, sehingga tidak ada pesan peringatan atau error yang muncul terkait `NaN` atau `Project_ID` yang tidak ditemukan.
 
---- Summary ---: Bagian ini merangkum hasil keseluruhan setelah loop selesai:
+4. `--- Summary ---`: Bagian ini merangkum hasil keseluruhan setelah loop selesai:
 
-Total valid energy output: 334000 kWh: Ini adalah jumlah total Energy_Output dari semua proyek yang berhasil diproses (dalam hal ini, semua 10 proyek).
+- `Total valid energy output: 334000 kWh`: Ini adalah jumlah total `Energy_Output` dari semua proyek yang berhasil diproses (dalam hal ini, semua 10 proyek).
 
-Number of valid projects processed: 10: Menunjukkan berapa banyak proyek yang memiliki Energy_Output yang valid dan disertakan dalam perhitungan.
+- `Number of valid projects processed: 10`: Menunjukkan berapa banyak proyek yang memiliki `Energy_Output` yang valid dan disertakan dalam perhitungan.
 
-Average energy output: 33400.00 kWh: Ini adalah rata-rata output energi yang dihitung (334000 / 10).
+- `Average energy output: 33400.00 kWh`: Ini adalah rata-rata output energi yang dihitung (`334000 / 10`).
 
-Output ini mengkonfirmasi bahwa skrip berhasil mengiterasi melalui daftar proyek, mengambil Energy_Output untuk setiap proyek yang valid, dan kemudian menghitung total dan rata-rata dengan benar. Tidak ada Project_ID yang hilang atau output energi NaN dalam dataset yang diberikan, sehingga bagian penanganan error (missing_projects dan invalid_outputs) tetap kosong.
+Output ini mengkonfirmasi bahwa skrip berhasil mengiterasi melalui daftar proyek, mengambil `Energy_Output` untuk setiap proyek yang valid, dan kemudian menghitung total dan rata-rata dengan benar. Tidak ada `Project_ID` yang hilang atau output energi NaN dalam dataset yang diberikan, sehingga bagian penanganan error (missing_projects dan invalid_outputs) tetap kosong.
 
-Soal Bonus: Machine Learning/AI dengan Decision Tree
-Deskripsi:
+---
+
+# Soal Bonus: Machine Learning/AI dengan Decision Tree
+
+**Deskripsi:**
+
 Pemerintah bertujuan untuk memprediksi daya tarik investasi ("High", "Medium", "Low") untuk proyek-proyek baru berdasarkan fitur-fitur seperti GDP_Growth, CO2_Reduction, dan Investment_Cost.
 
 Tugas:
