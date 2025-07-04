@@ -9,6 +9,18 @@ Description: The government aims to predict investment attractiveness ("High", "
 
 ✔️Jawaban:
 
+Pertanyaan bonus ini membahas dasar-dasar machine learning. Ini melibatkan:
+
+Persiapan Data: Menggabungkan beberapa dataset dan memilih fitur yang relevan serta variabel target.
+
+- **Pelatihan Model:** Menggunakan `DecisionTreeClassifier` dari `scikit-learn` untuk melatih model. Ini biasanya melibatkan pembagian data menjadi set pelatihan dan pengujian, penanganan fitur kategorikal (misalnya, dengan one-hot encoding), dan pemasangan model.
+
+- **Evaluasi:** Menilai kinerja model (misalnya, menggunakan skor akurasi).
+
+- **Prediksi:** Menggunakan model yang telah dilatih untuk memprediksi daya tarik investasi dari proyek baru yang belum pernah dilihat.
+
+Berikut skripnya:
+
 ```
 
 import pandas as pd
@@ -105,3 +117,7 @@ print(f"Predicted Investment Attractiveness: {predicted_attractiveness[0]}")
 💡Analisis:
 
 Hasil Machine menunjukan bahwa datasetnya terlalu sedikit, namun jika tetap dilakukan training dihasilkan tingkat akurasi 0.5, dengan prediksi tingat kemenarikan untuk berinvestasi medium.
+
+Ketika akurasi model Decision Tree pada data pengujian adalah 0.5 (atau 50%), itu berarti setengah dari prediksi model tersebut benar, dan setengahnya lagi sala akurasi 0.5 berarti model tidak lebih baik dari tebakan acak dan membutuhkan perbaikan signifikan.
+
+
