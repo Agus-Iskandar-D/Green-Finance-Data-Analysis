@@ -120,6 +120,9 @@ Description: The government needs the average CO2 reduction across PLTM projects
 ✔️Jawaban:
 
 ```
+
+import pandas as pd
+
 df_Env = pd.read_excel('Data/Environmental_Dataset.xlsx')
 
 # make list CO_Reduction
