@@ -547,5 +547,5 @@ Description: The government aims to predict investment attractiveness ("High", "
 
 ✔️Jawaban:
 
-Klik: ![Jawaban Bonus Question bisa baca disini](https://github.com/Agus-Iskandar-D/Green-Finance-Data-Analysis/blob/Bonus-Question-Sklearn/README.md)
+Klik: [Jawaban Bonus Question bisa baca disini](https://github.com/Agus-Iskandar-D/Green-Finance-Data-Analysis/blob/Bonus-Question-Sklearn/README.md)
 
