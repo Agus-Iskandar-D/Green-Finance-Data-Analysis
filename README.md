@@ -6,8 +6,8 @@ Repositori ini menyajikan serangkaian analisis data yang berfokus pada proyek-pr
 
 ---
 
-|Nama|	No Absen|	Kelompok|
-|-|-|-|
+|Nama|	No Absen|
+|-|-|
 |Agus Iskandar Darmawan|	09.000.DB2025|
 |Gunawan|	10.005.DB2025|
 |M. Sandi Firmansyah|	10.006.DB2025|
@@ -60,9 +60,49 @@ Melalui analisis ini, diharapkan dapat memberikan fondasi yang kuat untuk evalua
 
 Description: The government seeks to identify PLTS projects with high CO2 reduction efficiency per unit of investment, calculated as CO2 reduction per million rupiah.
 
-Task:
+📌Task:
 
 - Merge Environmental_Dataset.xlsx and Financial_Dataset.xlsx using Project_ID.
 - For PLTS projects (Project_ID starts with "PLTS"), compute the ratio: CO2_Reduction / (Investment_Cost * 1_000_000).
 - Use if-else to classify the ratio as "High" (≥ 0.5 tons CO2e/million Rp) or "Low"(< 0.5).
 - Display results as: "Project_ID: Ratio (Category)" using f-strings.
+
+✔️Jawaban:
+
+```
+
+# import pandas ibrary
+import pandas as pd
+
+# read the Environmental_Dataset
+df_Env = pd.read_excel('Data/Environmental_Dataset.xlsx')
+
+# read the Financial_Dataset
+df_Fin = pd.read_excel('Data/Financial_Dataset.xlsx')
+
+# merge the datasets by Project_Id field and merge all the columns
+df_merged = pd.merge( df_Env, df_Fin, on='Project_ID', how='outer' )
+
+# call the row to use
+for index, row in df_merged.iterrows():
+
+    # calculate the CO2 reduction efficiency per million investment the PLTS Project
+    if row['Project_ID'].startswith('PLTS'):
+        ratio = (row['CO2_Reduction']) / (row['Investment_Cost'] * 1000000)
+
+        # print the ratio category
+        if ratio >= 0.5:
+            print(f'{row['Project_ID']}: {ratio} (High)')
+        else:
+            print(f'{row['Project_ID']}: {ratio} (Low)')
+
+```
+
+📈 Output:
+
+PLTS-JABW-001: 0.0004318181818181818 (Low)
+PLTS-JATIM-001: 0.0004494830944413924 (Low)
+PLTS-NTB-001: 0.00044444444444444447 (Low)
+PLTS-NTT-001: 0.0005 (Low)
+PLTS-SULS-001: 0.00047808764940239046 (Low)
+
