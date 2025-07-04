@@ -8,9 +8,9 @@ Repositori ini menyajikan serangkaian analisis data yang berfokus pada proyek-pr
 
 |Nama|	No Absen|	Kelompok|
 |-|-|-|
-|Agus Iskandar Darmawan|	09.000.DB2025|	II|
-|Gunawan|	10.005.DB2025|	II|
-|M. Sandi Firmansyah|	10.006.DB2025|	II|
+|Agus Iskandar Darmawan|	09.000.DB2025|
+|Gunawan|	10.005.DB2025|
+|M. Sandi Firmansyah|	10.006.DB2025|
 
 ---
 
@@ -62,7 +62,7 @@ Description: The government seeks to identify PLTS projects with high CO2 reduct
 
 Task:
 
-• Merge Environmental_Dataset.xlsx and Financial_Dataset.xlsx using Project_ID.
-• For PLTS projects (Project_ID starts with "PLTS"), compute the ratio: CO2_Reduction / (Investment_Cost * 1_000_000).
-• Use if-else to classify the ratio as "High" (≥ 0.5 tons CO2e/million Rp) or "Low"(< 0.5).
-• Display results as: "Project_ID: Ratio (Category)" using f-strings.
+- Merge Environmental_Dataset.xlsx and Financial_Dataset.xlsx using Project_ID.
+- For PLTS projects (Project_ID starts with "PLTS"), compute the ratio: CO2_Reduction / (Investment_Cost * 1_000_000).
+- Use if-else to classify the ratio as "High" (≥ 0.5 tons CO2e/million Rp) or "Low"(< 0.5).
+- Display results as: "Project_ID: Ratio (Category)" using f-strings.
