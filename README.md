@@ -1,15 +1,3 @@
-main
-=======
-Bonus-Question-Sklearn
-# Bonus Question: Machine Learning/AI with Decision Tree
-Description: The government aims to predict investment attractiveness ("High", "Medium", "Low") for new projects based on features like GDP_Growth, CO2_Reduction, and Investment_Cost.
-
-📌Task:
-
-- Merge Economic_Dataset.xlsx, Environmental_Dataset.xlsx, and Financial_Dataset.xlsx
-- Use scikit-learn to build a Decision Tree Classifier with Daya_Tarik_Investasi as the target.
-- Train the model, evaluate its accuracy, and predict the attractiveness of a new project (e.g., GDP_Growth=5.0, CO2_Reduction=70000, Investment_Cost=150).
-=======
 # Green Finance Data Analysis
 
 Repositori ini menyajikan serangkaian analisis data yang berfokus pada proyek-proyek energi hijau, khususnya di Indonesia. Analisis ini dirancang untuk memberikan wawasan mendalam kepada para pemangku kepentingan, seperti pemerintah, investor, dan pengembang proyek, sehingga memungkinkan mereka untuk membuat keputusan yang terinformasi dan berbasis data.
@@ -18,13 +6,6 @@ Repositori ini menyajikan serangkaian analisis data yang berfokus pada proyek-pr
 
 ---
 
-
-|Nama|	No Absen|Klompok|
-|-|-|-|
-|Agus Iskandar Darmawan|	09.009.DB2025|II|
-|Gunawan|	10.005.DB2025|II|
-|M. Sandi Firmansyah|	10.006.DB2025|II|
-=======
 |Nama|	No Absen|
 |-|-|
 |Agus Iskandar Darmawan|	09.009.DB2025|
