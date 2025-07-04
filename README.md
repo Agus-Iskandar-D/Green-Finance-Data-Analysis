@@ -103,5 +103,57 @@ for index, row in df_merged.iterrows():
 ![output 1](https://github.com/Agus-Iskandar-D/Green-Finance-Data-Analysis/blob/main/Asset/output%201.png)
 
 💡 Analisis:
-Projek PLTS memiliki efisiensi pengurangan karbon (CO2 Reduction) per satu juta nilai investasi (per unit investasi) rendah (low). Artinya....
 
+Projek PLTS memiliki efisiensi pengurangan karbon (CO2 Reduction) per satu juta nilai investasi (per unit investasi) rendah (low). Artinya perlu ada peningkatan pengurangan karbon setiap unit investasi agar projek bisa menjadi projek hijau.
+
+## Question 2: For Loop and Lists
+
+Description: The government needs the average CO2 reduction across PLTM projects to assess their collective environmental impact.
+
+📌Task:
+
+- Use Environmental_Dataset.xlsx.
+- Create a list of CO2_Reduction values for PLTM projects (Project_ID starts with "PLTM").
+- Use a for loop to calculate the total CO2 reduction and count of PLTM projects.
+- Compute and display the average.
+
+✔️Jawaban:
+
+```
+
+import pandas as pd
+
+
+df_Env = pd.read_excel('Data/Environmental_Dataset.xlsx')
+
+# make list CO_Reduction
+PLTM_CO2_Red_List = []
+
+for index, row in df_Env.iterrows():
+    Project_ID = row['Project_ID']
+    CO2_Reduction = row ['CO2_Reduction']
+
+    # make list value Project_ID starts with "PLTM"
+    if isinstance(Project_ID, str) and Project_ID.startswith("PLTM"):
+        PLTM_CO2_Red_List.append(CO2_Reduction)
+    
+# calculate the average
+total_CO2_reduction = 0
+count_CO2_reduction = 0
+for CO2_Reduction_Value in PLTM_CO2_Red_List:
+    total_CO2_reduction += CO2_Reduction_Value
+    count_CO2_reduction += 1
+    average_CO2_reduction = total_CO2_reduction / count_CO2_reduction
+
+# print the average
+print(f"Average CO2 Reduction for PLTM Projects:{average_CO2_reduction} tons CO2e")
+
+```
+
+📈 Output:
+
+![output 2](https://github.com/Agus-Iskandar-D/Green-Finance-Data-Analysis/blob/main/Asset/output%202.png)
+
+💡 Analisis:
+
+Projek PLTM memiliki Rata-rata CO2 Reduction sebesar 34.600 ton CO2e. 
