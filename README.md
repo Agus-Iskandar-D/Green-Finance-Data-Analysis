@@ -16,6 +16,13 @@ Repositori ini menyajikan serangkaian analisis data yang berfokus pada proyek-pr
 
 ---
 
+
+|Nama|	No Absen|Klompok|
+|-|-|-|
+|Agus Iskandar Darmawan|	09.009.DB2025|II|
+|Gunawan|	10.005.DB2025|II|
+|M. Sandi Firmansyah|	10.006.DB2025|II|
+=======
 |Nama|	No Absen|
 |-|-|
 |Agus Iskandar Darmawan|	09.009.DB2025|
