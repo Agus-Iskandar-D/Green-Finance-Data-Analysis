@@ -7,6 +7,8 @@ Description: The government aims to predict investment attractiveness ("High", "
 - Use scikit-learn to build a Decision Tree Classifier with Daya_Tarik_Investasi as the target.
 - Train the model, evaluate its accuracy, and predict the attractiveness of a new project (e.g., GDP_Growth=5.0, CO2_Reduction=70000, Investment_Cost=150).
 
+✔️Jawaban:
+
 ```
 
 import pandas as pd
