@@ -2,6 +2,8 @@
 
 Repositori ini menyajikan serangkaian analisis data yang berfokus pada proyek-proyek energi hijau, khususnya di Indonesia. Analisis ini dirancang untuk memberikan wawasan mendalam kepada para pemangku kepentingan, seperti pemerintah, investor, dan pengembang proyek, sehingga memungkinkan mereka untuk membuat keputusan yang terinformasi dan berbasis data.
 
+**Disusun oleh Kelompok II**
+
 ---
 
 |Nama|	No Absen|	Kelompok|
@@ -9,6 +11,7 @@ Repositori ini menyajikan serangkaian analisis data yang berfokus pada proyek-pr
 |Agus Iskandar Darmawan|	09.000.DB2025|	II|
 |Gunawan|	10.005.DB2025|	II|
 |M. Sandi Firmansyah|	10.006.DB2025|	II|
+
 ---
 
 # 📖Pendahuluan
@@ -53,4 +56,13 @@ Notebook Jupyter dalam repositori ini (`notebooks/Green_Finance_Data-Analysis.ip
 Melalui analisis ini, diharapkan dapat memberikan fondasi yang kuat untuk evaluasi proyek energi hijau yang lebih efektif dan mendukung transisi Indonesia menuju masa depan energi yang lebih berkelanjutan.
 
 # ✍🏻 Pembahasan
+## Question 1: Conditional Statements (If-Else) and Arithmetic Operations 
 
+Description: The government seeks to identify PLTS projects with high CO2 reduction efficiency per unit of investment, calculated as CO2 reduction per million rupiah.
+
+Task:
+
+• Merge Environmental_Dataset.xlsx and Financial_Dataset.xlsx using Project_ID.
+• For PLTS projects (Project_ID starts with "PLTS"), compute the ratio: CO2_Reduction / (Investment_Cost * 1_000_000).
+• Use if-else to classify the ratio as "High" (≥ 0.5 tons CO2e/million Rp) or "Low"(< 0.5).
+• Display results as: "Project_ID: Ratio (Category)" using f-strings.
