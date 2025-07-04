@@ -102,3 +102,5 @@ print(f"Predicted Investment Attractiveness: {predicted_attractiveness[0]}")
 ![output bonus](https://github.com/Agus-Iskandar-D/Green-Finance-Data-Analysis/blob/main/Asset/output%20bonus.png)
 
 💡Analisis:
+
+Hasil Machine menunjukan bahwa datasetnya terlalu sedikit, namun jika tetap dilakukan training dihasilkan tingkat akurasi 0.5, dengan prediksi tingat kemenarikan untuk berinvestasi medium.
